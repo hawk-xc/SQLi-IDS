@@ -16,12 +16,12 @@ alert tcp any any -> any 80 (msg: "Order by SQL Injection"; content: "order" ; s
 alert tcp any any -> any 80 (msg: "UNION SELECT SQL Injection"; content: "union" ; sid:1000018; )
 
 # based union sqli
-alert tcp any any -> any any (msg:"SQLi Attempt 1"; content"or 1=1"; sid: 1000022
-alert tcp any any -> any any (msg:"SQLi Attempt 1"; content"union select 1"; sid: 1000023
-alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"union all select 1"; sid: 1000024
-alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"order by 1"; sid: 1000025
-alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"group by username"; sid: 1000026
-alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"group by password"; sid: 1000027
+alert tcp any any -> any any (msg:"SQLi Attempt 1"; content"or 1=1"; sid: 1000022;)
+alert tcp any any -> any any (msg:"SQLi Attempt 1"; content"union select 1"; sid: 1000023;)
+alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"union all select 1"; sid: 1000024;)
+alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"order by 1"; sid: 1000025;)
+alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"group by username"; sid: 1000026;)
+alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"group by password"; sid: 1000027;)
 
 # based boelan
 alert tcp any any -> any any (msg:"Sqli Attempt with RegEx 1; pcre:"/or \[d]+=[\d]*/i"; sid: 1000019; rev:1;)
