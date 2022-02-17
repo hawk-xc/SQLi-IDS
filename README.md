@@ -26,5 +26,7 @@ alert tcp any any -> any any (msg:"SQLi Attempt 1"; content:"group by password";
 # based boelan
 alert tcp any any -> any any (msg:"Sqli Attempt with RegEx 1; pcre:"/or \[d]+=[\d]*/i"; sid: 1000019; rev:1;)
 alert tcp any any -> any any (msg:"Sqli Attempt with RegEx 1; pcre:"/\' or \'[A-Za-z0-9]*\'=\'/i"; sid: 1000020; rev:1;)
+
+# ping imcp allert
 alert icmp any any -> any any (msg:"no more ping"; sid:1000021;)
 ```
