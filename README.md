@@ -40,4 +40,7 @@ alert tcp any any -> any 6200 (msg:"Cross Site Scripting - XSS - JSONP"; flow:es
 
 # ping imcp allert
 alert icmp any any -> any any (msg:"no more ping"; sid:1000026;)
+
+# nmap scan alert
+alert icmp any any -> 192.168.1.105 any (msg: “NMAP ping sweep Scan”; dsize:0;sid:10000004; rev: 1; )
 ```
